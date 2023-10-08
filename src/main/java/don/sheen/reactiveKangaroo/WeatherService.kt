@@ -10,6 +10,7 @@ class WeatherService {
     val webClient = WebClient.create("https://api.weather.gov/gridpoints/MLB/33,70/")
 
 
+    //TODO add a structure and not rely on casting here
     fun getDailyWeather() : Mono<Daily> {
         return webClient
             .get()
